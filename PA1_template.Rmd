@@ -21,7 +21,7 @@ setwd("S:/Coursera/R/WD")
 
 #Unzip the file
 if (!file.exists('activity.csv')) {
-  unzip(zipfile = "activity.zip")
+  unzip(zipfile = "repdata_data_activity.zip")
 }
 activityData <- read.csv(file="activity.csv", header=TRUE)
 
@@ -81,7 +81,7 @@ impMedSteps <- median(impStepsByInt$steps, na.rm = TRUE)
 diffMean = impMeanSteps - meanSteps
 diffMed = impMedSteps - medSteps
 diffTotal = sum(impStepsByInt$steps) - sum(totalSteps$steps)
-#The difference of the two dataset in the mean steps = 0. The difference   of the two dataset in the median steps= -10763.81. 
+#The difference of the two dataset in the mean steps = 0. The difference   of the two dataset in the median steps= 1.188679
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
